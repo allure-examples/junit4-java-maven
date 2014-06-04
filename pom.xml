@@ -14,15 +14,15 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <allure.version>1.3.6</allure.version>
+        <allure.version>1.3.9</allure.version>
         <aspectj.version>1.7.4</aspectj.version>
 
         <compiler.version>1.7</compiler.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <name>Allure Example Unsing jUnit and WebDriver</name>
-    <description>Allure Example Unsing jUnit and WebDriver</description>
+    <name>Allure JUnit Example</name>
+    <description>Allure JUnit and WebDriver Usage Example</description>
 
     <dependencies>
         <dependency>
