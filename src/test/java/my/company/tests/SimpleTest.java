@@ -1,7 +1,7 @@
 package my.company.tests;
 
 import org.junit.Test;
-import ru.yandex.qatools.allure.annotations.Attach;
+import ru.yandex.qatools.allure.annotations.Attachment;
 import ru.yandex.qatools.allure.annotations.Step;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -29,7 +29,7 @@ public class SimpleTest {
         checkThat2is2();
     }
 
-    @Attach
+    @Attachment
     public String makeAttach() {
         return "yeah, 2 is 2";
     }
