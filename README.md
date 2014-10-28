@@ -11,5 +11,3 @@ To generate Allure Report you should perform following steps:
 * git clone git@github.com:allure-framework/allure-junit-example.git
 * mvn clean test
 * mvn site
-
-** Allure Version: ** 1.4.3
