@@ -4,8 +4,6 @@
 
 ## Allure JUnit Example
 
-## PUll request
-
 To run tests you need to install [maven][maven], [git][git] and [phantomjs][phantomjs].
 
 To generate Allure Report you should perform following steps:
