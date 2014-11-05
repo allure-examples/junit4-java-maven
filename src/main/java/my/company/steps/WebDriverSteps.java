@@ -33,8 +33,8 @@ public class WebDriverSteps {
     }
 
     @Attachment(type = "image/png")
-    public File makeScreenshot() {
-        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+    public byte[] makeScreenshot() {
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
     public void quit() {
