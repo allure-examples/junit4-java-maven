@@ -29,7 +29,7 @@ public class WebDriverSteps {
     @Step
     public void search(String text) {
         driver.findElement(By.id("text")).sendKeys(text);
-        driver.findElement(By.className("b-form-button__input")).submit();
+        driver.findElement(By.className("suggest2-form__button")).submit();
     }
 
     @Attachment(type = "image/png")
