@@ -14,8 +14,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <allure.version>1.4.3</allure.version>
-        <aspectj.version>1.7.4</aspectj.version>
+        <allure.version>1.4.8</allure.version>
+        <aspectj.version>1.8.5</aspectj.version>
 
         <compiler.version>1.7</compiler.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -47,7 +47,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.0</version>
+                <version>3.2</version>
                 <configuration>
                     <source>${compiler.version}</source>
                     <target>${compiler.version}</target>
@@ -56,7 +56,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.14</version>
+                <version>2.18.1</version>
                 <configuration>
                     <testFailureIgnore>false</testFailureIgnore>
                     <argLine>
@@ -76,6 +76,13 @@
                         <version>${aspectj.version}</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <configuration>
+                    <webAppSourceDirectory>${project.build.directory}/site/allure-maven-plugin</webAppSourceDirectory>
+                </configuration>
             </plugin>
         </plugins>
     </build>
