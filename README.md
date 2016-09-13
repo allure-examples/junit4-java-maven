@@ -1,4 +1,3 @@
-[phantomjs]: http://phantomjs.org/download.html
 [maven]: http://maven.apache.org/
 [git]: http://git-scm.com/
 
@@ -6,8 +5,7 @@
 
 ### Getting Started
 
-To run tests you need to install [maven][maven], [git][git] and [phantomjs][phantomjs].
-
+To run the example you need to install [maven (3.1.1 or above)][maven] and [git][git]. 
 To generate Allure Report you should perform following steps:
 
 ```bash
@@ -17,8 +15,6 @@ $ mvn site
 ```
 
 To see a report, run `mvn jetty:run` and open `http://localhost:8080` in your browser
-
-**NOTE: required maven version 3.1.1 or above**
 
 ### More
 

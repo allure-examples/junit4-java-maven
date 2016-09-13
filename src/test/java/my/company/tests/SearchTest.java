@@ -1,10 +1,10 @@
 package my.company.tests;
 
+import io.github.bonigarcia.wdm.ChromeDriverManager;
 import my.company.steps.WebDriverSteps;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
  * @author Dmitry Baev charlie@yandex-team.ru
@@ -16,18 +16,16 @@ public class SearchTest {
 
     @Before
     public void setUp() throws Exception {
-        steps = new WebDriverSteps(
-                new PhantomJSDriver(new DesiredCapabilities())
-        );
+        ChromeDriverManager.getInstance().setup();
+        steps = new WebDriverSteps(new ChromeDriver());
     }
 
     @Test
     public void searchTest() throws Exception {
         steps.openMainPage();
-        steps.search("Yandex QATools");
-        steps.makeScreenshot();
+        steps.search("Allure framework");
+        steps.makeScreenShot();
         steps.quit();
     }
-
 }
 

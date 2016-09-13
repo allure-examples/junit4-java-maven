@@ -25,7 +25,6 @@ public class SimpleTest {
         assertThat(2, is(2));
     }
 
-
     @Step
     public void checkThat2is2() {
         assertThat(2, is(2));
