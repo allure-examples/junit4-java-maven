@@ -5,6 +5,7 @@ import my.company.steps.WebDriverSteps;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
+import ru.yandex.qatools.allure.annotations.Issue;
 
 /**
  * @author Dmitry Baev charlie@yandex-team.ru
@@ -21,6 +22,7 @@ public class SearchTest {
     }
 
     @Test
+    @Issue("ISSUE-1")
     public void searchTest() throws Exception {
         steps.openMainPage();
         steps.search("Allure framework");
