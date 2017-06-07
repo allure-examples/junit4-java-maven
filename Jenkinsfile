@@ -8,7 +8,7 @@ pipeline {
         }
         stage("Reports") {
             steps {
-                allure(config: [results: [[path: 'target/allure-results']]])
+                allure(config(results([path: 'target/allure-results'])))
             }
         }
     }
