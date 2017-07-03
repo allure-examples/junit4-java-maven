@@ -1,11 +1,11 @@
 package my.company.tests;
 
 import io.github.bonigarcia.wdm.ChromeDriverManager;
+import io.qameta.allure.Issue;
 import my.company.steps.WebDriverSteps;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
-import ru.yandex.qatools.allure.annotations.Issue;
 
 /**
  * @author Dmitry Baev charlie@yandex-team.ru

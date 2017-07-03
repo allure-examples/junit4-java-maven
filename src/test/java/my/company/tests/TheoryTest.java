@@ -1,10 +1,10 @@
 package my.company.tests;
 
+import io.qameta.allure.Step;
 import org.junit.experimental.theories.DataPoint;
 import org.junit.experimental.theories.Theories;
 import org.junit.experimental.theories.Theory;
 import org.junit.runner.RunWith;
-import ru.yandex.qatools.allure.annotations.Step;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.not;

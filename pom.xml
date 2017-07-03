@@ -20,7 +20,6 @@
     </scm>
 
     <properties>
-        <allure.version>1.4.23.HOTFIX1</allure.version>
         <aspectj.version>1.8.9</aspectj.version>
         <compiler.version>1.7</compiler.version>
     </properties>
@@ -30,9 +29,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>ru.yandex.qatools.allure</groupId>
-            <artifactId>allure-junit-adaptor</artifactId>
-            <version>${allure.version}</version>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-junit4</artifactId>
+            <version>2.0-BETA13</version>
         </dependency>
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
@@ -65,13 +64,17 @@
                     <properties>
                         <property>
                             <name>listener</name>
-                            <value>ru.yandex.qatools.allure.junit.AllureRunListener</value>
+                            <value>io.qameta.allure.junit4.AllureJunit4</value>
                         </property>
                     </properties>
                     <systemProperties>
                         <property>
                             <name>allure.results.directory</name>
                             <value>${project.build.directory}/allure-results</value>
+                        </property>
+                        <property>
+                            <name>allure.link.issue.pattern</name>
+                            <value>https://example.org/issue/{}</value>
                         </property>
                     </systemProperties>
                 </configuration>
@@ -83,31 +86,11 @@
                     </dependency>
                 </dependencies>
             </plugin>
-
-            <!--Needed only to show reports locally. Run jetty:run and
-            open localhost:8080 to show the report-->
             <plugin>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.2.10.v20150310</version>
-                <configuration>
-                    <webAppSourceDirectory>${project.build.directory}/site/allure-maven-plugin</webAppSourceDirectory>
-                    <stopKey>stop</stopKey>
-                    <stopPort>1234</stopPort>
-                </configuration>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.8</version>
             </plugin>
         </plugins>
     </build>
-
-    <reporting>
-        <excludeDefaults>true</excludeDefaults>
-        <plugins>
-            <plugin>
-                <groupId>ru.yandex.qatools.allure</groupId>
-                <artifactId>allure-maven-plugin</artifactId>
-                <version>2.5</version>
-            </plugin>
-        </plugins>
-    </reporting>
-
 </project>

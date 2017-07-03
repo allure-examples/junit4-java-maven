@@ -3,9 +3,9 @@ package my.company.tests;
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import ru.yandex.qatools.allure.annotations.Title;
 
 import static org.junit.Assert.assertEquals;
 
@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
  * eroshenkoam
  * 01.05.17
  */
-@Title("Data provider test")
+@DisplayName("Data provider test")
 @RunWith(DataProviderRunner.class)
 public class DataProviderTest {
 
