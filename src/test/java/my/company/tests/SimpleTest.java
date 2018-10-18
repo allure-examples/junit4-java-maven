@@ -1,6 +1,7 @@
 package my.company.tests;
 
 import io.qameta.allure.Attachment;
+import io.qameta.allure.Description;
 import io.qameta.allure.Step;
 import org.junit.Test;
 
@@ -46,6 +47,7 @@ public class SimpleTest {
         makeAttach();
     }
 
+    @Description("Test shows CSV attachment")
     @Test
     public void csvAttachmentTest() throws Exception {
         saveCsvAttachment();
