@@ -68,17 +68,13 @@
                             <value>io.qameta.allure.junit4.AllureJunit4</value>
                         </property>
                     </properties>
-                    <systemProperties>
-                        <property>
-                            <name>allure.results.directory</name>
-                            <value>${project.build.directory}/allure-results</value>
-                        </property>
-                        <property>
-                            <name>allure.link.issue.pattern</name>
-                            <value>https://example.org/issue/{}</value>
-                        </property>
-                    </systemProperties>
-                </configuration>
+                    <systemProperties>		
+                         <property>		
+                             <name>allure.results.directory</name>		
+                             <value>${project.build.directory}/allure-results</value>		
+                         </property>		
+                     </systemProperties>
+                </configuration>                     
                 <dependencies>
                     <dependency>
                         <groupId>org.aspectj</groupId>
