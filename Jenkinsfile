@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    parameters {
+        string(name: 'AS_LAUNCH_ID', defaultValue: '', description: '')
+        string(name: 'AS_EXECUTION_ID', defaultValue: '', description: '')
+    }
     stages {
         stage('Build') {
           steps {
