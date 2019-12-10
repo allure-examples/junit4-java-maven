@@ -1,6 +1,7 @@
 package my.company.tests;
 
 import io.qameta.allure.Attachment;
+import io.qameta.allure.Description;
 import io.qameta.allure.Step;
 import org.junit.Test;
 
@@ -21,6 +22,9 @@ import static org.junit.Assert.fail;
 public class SimpleTest {
 
     @Test
+    @JiraIssue("TES-4")
+    @XrayId("XTA-1")
+    @Description("Some important description")
     public void simpleTest() throws Exception {
         assertThat(2, is(2));
     }
@@ -31,6 +35,7 @@ public class SimpleTest {
     }
 
     @Test
+    @XrayId("XTA-2")
     public void simpleTestWithSteps() throws Exception {
         checkThat2is2();
     }
@@ -49,6 +54,29 @@ public class SimpleTest {
     @Test
     public void csvAttachmentTest() throws Exception {
         saveCsvAttachment();
+    }
+
+    @Test
+    public void instCheck() {
+        final Object object = null;
+
+        if (object instanceof Long) {
+            System.out.println(object);
+        }
+    }
+
+    @Test
+    public void extracktProjectKey() {
+        String ik = "ASD-BG-13";
+        String pk = extractProjectKey(ik);
+        System.out.println(pk);
+    }
+
+    private static String extractProjectKey(final String issueKey) {
+        if (issueKey == null || "".equals(issueKey)) {
+            return "";
+        }
+        return issueKey.substring(0, issueKey.lastIndexOf("-"));
     }
 
     @Attachment(value = "Sample csv attachment", type = "text/csv")

@@ -1,5 +1,6 @@
 package my.company.tests;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.Step;
 import org.junit.experimental.theories.DataPoint;
 import org.junit.experimental.theories.Theories;
@@ -22,6 +23,8 @@ public class TheoryTest {
     @DataPoint
     public static String USERNAME2 = "optimus-prime";
 
+    @XrayId("XTA-3")
+    @Description("Some important description2")
     @Theory
     public void usernameNotContainsSlash(String username) {
         checkUserName(username);
@@ -29,6 +32,16 @@ public class TheoryTest {
 
     @Step
     public void checkUserName(String username) {
+        checkUserName1(username);
+    }
+
+    @Step
+    public void checkUserName1(String username) {
+        checkUserName2(username);
+    }
+
+    @Step
+    public void checkUserName2(String username) {
         assertThat(username, not(containsString("/")));
     }
 }

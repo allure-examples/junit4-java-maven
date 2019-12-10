@@ -7,7 +7,11 @@ pipeline {
     stages {
         stage('Build') {
           steps {
-            withAllureUpload(serverId: 'local_home', projectId: '5', results: [[path: 'target/allure-results']]) {
+            withAllureUpload(serverId: 'local_home',
+                             projectId: '5',
+                             name: '${JOB_NAME} - #${BUILD_NUMBER}',
+                             tags: '${JOB_NAME}+JU any; windows; pile;;pipe',
+                             results: [[path: 'target/allure-results']]) {
                  sh "./mvnw -Dmaven.test.failure.ignore clean test"
             }
           }

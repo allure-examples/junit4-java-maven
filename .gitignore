@@ -11,3 +11,6 @@ target
 *.classpath
 *.project
 *.pydevproject
+
+#MacOs files
+.DS_Store

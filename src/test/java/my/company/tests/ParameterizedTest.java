@@ -32,6 +32,7 @@ public class ParameterizedTest {
     }
 
     @Test
+    @JiraIssue("TES-2")
     public void testMultiplication() {
         assertThat((long) first * second, equalTo(result));
     }
