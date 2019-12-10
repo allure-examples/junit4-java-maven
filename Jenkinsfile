@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
           steps {
-            withAllureUpload(serverId: 'local_home',
+            withAllureUpload(serverId: 'qameta-local',
                              projectId: '5',
                              name: '${JOB_NAME} - #${BUILD_NUMBER}',
                              tags: '${JOB_NAME}+JU any; windows; pile;;pipe',
