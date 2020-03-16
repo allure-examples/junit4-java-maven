@@ -23,7 +23,6 @@ public class SearchTest {
 
     @Test
     @Issue("TES-2")
-    @XrayId("NXT-1")
     public void searchTest() throws Exception {
         steps.openMainPage();
         steps.search("Allure framework");

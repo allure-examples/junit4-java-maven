@@ -26,7 +26,6 @@ public class DataProviderTest {
     }
 
     @Test
-    @XrayId("NXT-6")
     @UseDataProvider("dataProviderAdd")
     public void testAdd(int first, int second, long result) {
         assertEquals(first + second, result);

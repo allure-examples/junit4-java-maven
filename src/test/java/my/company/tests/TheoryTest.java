@@ -23,7 +23,6 @@ public class TheoryTest {
     @DataPoint
     public static String USERNAME2 = "optimus-prime";
 
-    @XrayId("XTA-3")
     @Description("Some important description2")
     @Theory
     public void usernameNotContainsSlash(String username) {

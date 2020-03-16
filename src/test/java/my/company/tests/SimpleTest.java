@@ -3,6 +3,7 @@ package my.company.tests;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Description;
 import io.qameta.allure.Step;
+import io.qameta.allure.junit4.Tag;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -22,9 +23,8 @@ import static org.junit.Assert.fail;
 public class SimpleTest {
 
     @Test
-    @JiraIssue("TES-4")
-    @XrayId("XTA-1")
-    @Description("Some important description")
+    @Tag("XRAY:XT")
+    @Description("Simple test 2=2")
     public void simpleTest() throws Exception {
         assertThat(2, is(2));
     }
@@ -35,7 +35,8 @@ public class SimpleTest {
     }
 
     @Test
-    @XrayId("XTA-2")
+    @XrayId("XT-2")
+    @Description("Simple test with steps.")
     public void simpleTestWithSteps() throws Exception {
         checkThat2is2();
     }
@@ -46,17 +47,21 @@ public class SimpleTest {
     }
 
     @Test
+    @JiraIssue({"EP-1"})
+    @XrayId("XT-1")
     public void simpleTestWithAttachments() throws Exception {
         assertThat(2, is(2));
         makeAttach();
     }
 
+    @Tag("XRAY:XT")
     @Test
     public void csvAttachmentTest() throws Exception {
         saveCsvAttachment();
     }
 
     @Test
+    @XrayId("XT-3")
     public void instCheck() {
         final Object object = null;
 

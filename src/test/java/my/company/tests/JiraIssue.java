@@ -15,5 +15,5 @@ import io.qameta.allure.LabelAnnotation;
 @Target({ElementType.METHOD, ElementType.TYPE})
 @LabelAnnotation(name = "jira")
 public @interface JiraIssue {
-    String value();
+    String[] value();
 }
