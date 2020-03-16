@@ -55,6 +55,7 @@ public class SimpleTest {
     }
 
     @Tag("XRAY:XT")
+    @Description("Test shows CSV attachment")
     @Test
     public void csvAttachmentTest() throws Exception {
         saveCsvAttachment();
