@@ -1,0 +1,15 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: io.github.bonigarcia:webdrivermanager
+    versions:
+    - 4.3.1
+    - 4.4.0
+  - dependency-name: io.qameta.allure:allure-junit4
+    versions:
+    - 2.13.8
