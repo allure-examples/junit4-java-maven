@@ -20,7 +20,7 @@
     </scm>
 
     <properties>
-        <aspectj.version>1.9.4</aspectj.version>
+        <aspectj.version>1.9.7</aspectj.version>
         <compiler.version>1.7</compiler.version>
     </properties>
 
