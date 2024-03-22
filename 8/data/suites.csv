@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Mar 22 17:10:08 GMT 2024","Fri Mar 22 17:10:08 GMT 2024","17","","com.example.junit4.StepTest","","com.example.junit4.StepTest","annotatedStepTest","annotatedStepTest",""
+"passed","Fri Mar 22 17:10:08 GMT 2024","Fri Mar 22 17:10:08 GMT 2024","15","","com.example.junit4.StepTest","","com.example.junit4.StepTest","lambdaStepTest","lambdaStepTest",""
